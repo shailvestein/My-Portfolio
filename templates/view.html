@@ -25,7 +25,7 @@
         <div class="card shadow-sm mb-3">
           <div class="card-body">
             <h5 class="card-title">{{ project.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ project.from_date }} – {{ project.to_date }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{ project.from_date }} – {{ project.to_date if project.to_date else 'Present' }}</h6>
             <p class="card-text"><strong>Description:</strong></p>
             <ul>
               {% for desc in project.description.split('\n') %}
@@ -61,8 +61,8 @@
         <div class="card shadow-sm mb-3">
           <div class="card-body">
             <h5 class="card-title">{{ education.degree }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ education.from_date }} – {{ education.to_date if education.to_date else 'Present' }}</h6>
             <p class="card-text">{{ education.university }}</p>
-            <p class="card-subtitle mb-2 text-muted">From: {{ education.from_date }} To: {{ education.to_date }}</p>
             <p><strong>Field: </strong>{{ education.field }}</p>
             <p><i>percentage: </i>{{ education.percentage }}</p>
             <p><strong>Accomplishments:</strong> {{ education.accomplishments }}</p>
@@ -80,9 +80,7 @@
         <div class="card shadow-sm mb-3">
           <div class="card-body">
             <h4 class="card-title">{{ experience.company.capitalize() }}</h4>
-            <p class="card-subtitle mb-2 text-muted">
-              from: {{ experience.from_date }} <br>to: {{ experience.to_date }}
-            </p>
+            <h6 class="card-subtitle mb-2 text-muted">{{ experience.from_date }} – {{ experience.to_date if experience.to_date else 'Present' }}</h6>
             <p class="card-text"><strong>{{ experience.title.capitalize() }}</strong></p>
             <ul>  
               {% for jd in experience.description.split('\n') %}

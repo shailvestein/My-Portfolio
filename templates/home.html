@@ -70,12 +70,19 @@
         </div>
       {% elif section_key == 'project' %}
         <div class="section-card">
-          <h4>{{ item.title }}</h4>
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h4 class="mb-0">{{ item.title }}</h4>
+            <div class="date-range text-end">
+              <div>{{ item.from_date }} -- {{ item.to_date if item.to_date else 'Present' }}</div>
+            </div>
+          </div>
           <ul>
             {% for desc in item.description.split('\n') %}
               {% if desc.startswith('https://') %}
                 {% set d = desc.split(',') %}
-                <li> <a href="{{ d[0] }}" class="text-decoration-none" target="_blank">{{ d[1].capitalize() }}</a></li>
+                {% set link = d[0] %}
+                {% set desc = d[1] %}
+                <li><a href="{{ link }}" class="text-decoration-none" target="_blank">{{ desc.capitalize() }}</a></li>
               {% else %}
                 <li>{{ desc }}</li>
               {% endif %}
@@ -83,13 +90,13 @@
           </ul>
           <p><strong>Accomplishments:</strong> {{ item.accomplishments }}</p>
         </div>
+
       {% elif section_key == 'education' %}
         <div class="section-card">
           <div class="d-flex justify-content-between align-items-start mb-2">
-            <h4 class="mb-0">{{ item.degree.upper() }}</h4>
+            <h4 class="mb-0">{{ item.degree }}</h4>
             <div class="date-range text-end">
-              <div>From: {{ item.from_date }}</div>
-              <div>To: {{ item.to_date }}</div>
+              <div> {{ item.from_date }} -- {{ item.to_date if item.to_date else 'Present' }}</div>
             </div>
           </div>
           <ul>
@@ -103,8 +110,7 @@
           <div class="d-flex justify-content-between align-items-start mb-2">
             <h4 class="mb-0">{{ item.company.capitalize() }}</h4>
             <div class="date-range text-end">
-              <div>From: {{ item.from_date }}</div>
-              <div>To: {{ item.to_date }}</div>
+              <div> {{ item.from_date }} -- {{ item.to_date if item.to_date else 'Present' }}</div>
             </div>
           </div>
           <ul>
@@ -125,7 +131,7 @@
             {% endfor %}
           </ul>
         </div>
-      <a href="{{ url_for('static', filename='resume/resume.pdf') }}" download="My_Resume.pdf" class="btn btn-success">
+      <a href="{{ url_for('static', filename='resume/resume.pdf') }}" download="Resume - Shailesh Kumar Vishwakarma.pdf" class="btn btn-success">
         Download resume
       </a>
       {% elif section_key == 'contact' %}
