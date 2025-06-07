@@ -8,7 +8,7 @@ app.secret_key = os.getenv('SECRET_KEY')
 
 @app.route('/')
 def home():
-    sections = {'project' : supabase.table('project').select('*').execute().data,
+    sections = {'project' : supabase.table('project').select('*').order('id', desc=True).execute().data,
                 'about' : supabase.table('about').select('*').execute().data,
                 'contact' : supabase.table('contact').select('*').execute().data,
                 'education' : supabase.table('education').select('*').order('id', desc=True).execute().data, # Education.query.order_by(Education.id.desc()).all(),
