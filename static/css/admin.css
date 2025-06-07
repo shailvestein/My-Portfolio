@@ -1,0 +1,128 @@
+body {
+  background: linear-gradient(to right, #dbeafe, #fef9c3);
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 15px 10px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.typewriter-container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+  animation: typing 1s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typewriter-line {
+  opacity: 0;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: 0;
+  font-size: 1rem;
+}
+
+@keyframes typingLine {
+  from { width: 0; opacity: 1; }
+  to { width: 100%; opacity: 1; }
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: #76819e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+/* Small screen styling */
+@media (max-width: 576px) {
+  .header-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 10px;
+    text-align: center;
+  }
+
+  .typewriter {
+    font-size: 1.1rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .typewriter-line {
+    font-size: 1rem;
+  }
+
+  .logout-btn {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    margin-top: 5px;
+  }
+}
