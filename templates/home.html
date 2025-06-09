@@ -80,8 +80,8 @@
             {% for desc in item.description.split('\n') %}
               {% if desc.startswith('https://') %}
                 {% set d = desc.split(',') %}
-                {% set link = d[1] %}
-                {% set desc = d[0] %}
+                {% set link = d[0] %}
+                {% set desc = d[1] %}
                 <li><a href="{{ link }}" class="text-decoration-none" target="_blank">{{ desc.capitalize() }}</a></li>
               {% else %}
                 <li>{{ desc }}</li>
