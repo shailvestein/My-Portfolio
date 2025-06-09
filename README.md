@@ -27,6 +27,7 @@ A fully responsive and dynamic personal portfolio website built using **Flask**,
 ---
 
 ## 📁 Project Structure
+```
 My-Portfolio/
 ├── app.py               # Main Flask app with route handling
 ├── requirements.txt     # List of Python dependencies
@@ -42,3 +43,4 @@ My-Portfolio/
 ├── .env.template        # Template for environment variables
 └── README.md            # Project documentation
 
+```
