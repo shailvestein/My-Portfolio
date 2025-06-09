@@ -213,6 +213,7 @@ def edit(section, id):
             education['from_date'] = request.form['from_date']
             education['to_date'] = request.form['to_date']
             education['percentage'] = float(request.form['percentage'])
+            education['accomplishments'] = request.form['accomplishments']
             supabase.table('education').update(education).eq('id', id).execute()
             return redirect(url_for('view', section='education'))
         if education:
