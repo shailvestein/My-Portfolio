@@ -28,16 +28,17 @@ A fully responsive and dynamic personal portfolio website built using **Flask**,
 
 ## 📁 Project Structure
 My-Portfolio/
-├── app.py # Main Flask app with route handling
-├── requirements.txt # List of Python dependencies
-├── supabase_client.py # Supabase client setup
-├── static/ # CSS, JS, and image files
-├── templates/ # HTML templates using Jinja2
-│ ├── home.html
-│ ├── login.html
-│ ├── admin.html
-│ ├── add.html
-│ ├── edit.html
-│ └── view.html
-├── .env.template # Template for environment variables
-└── README.md # Project documentation
+├── app.py               # Main Flask app with route handling
+├── requirements.txt     # List of Python dependencies
+├── supabase_client.py   # Supabase client setup
+├── static/              # CSS, JS, and image files
+├── templates/           # HTML templates using Jinja2
+│   ├── home.html
+│   ├── login.html
+│   ├── admin.html
+│   ├── add.html
+│   ├── edit.html
+│   └── view.html
+├── .env.template        # Template for environment variables
+└── README.md            # Project documentation
+
