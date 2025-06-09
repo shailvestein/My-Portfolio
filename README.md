@@ -40,7 +40,6 @@ My-Portfolio/
 │   ├── add.html
 │   ├── edit.html
 │   └── view.html
-├── .env.template        # Template for environment variables
 └── README.md            # Project documentation
 
 ```
