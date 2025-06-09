@@ -103,7 +103,7 @@
             <li>University: {{ item.university }}</li>
             <li>Percentage: {{ item.percentage }}%</li>
             <li>Field: {{ item.field }}</li>
-            {% if len(item.accomplishments) > 0 %}
+            {% if item.accomplishments|length > 0 %}
               <li><strong>Accomplishments: </strong>{{ item.accomplishments }}</li>
             {% endif %}
           </ul>
