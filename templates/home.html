@@ -80,8 +80,8 @@
             {% for desc in item.description.split('\n') %}
               {% if desc.startswith('https://') %}
                 {% set d = desc.split(',') %}
-                {% set link = d[0] %}
-                {% set desc = d[1] %}
+                {% set link = d[1] %}
+                {% set desc = d[0] %}
                 <li><a href="{{ link }}" class="text-decoration-none" target="_blank">{{ desc.capitalize() }}</a></li>
               {% else %}
                 <li>{{ desc }}</li>
@@ -103,6 +103,8 @@
             <li>University: {{ item.university }}</li>
             <li>Percentage: {{ item.percentage }}%</li>
             <li>Field: {{ item.field }}</li>
+            {% if item.accomplishments %}
+              <li><strong>Accomplishments: </strong>{{ item.accomplishments }}</li>
           </ul>
         </div>
       {% elif section_key == 'experience' %}
