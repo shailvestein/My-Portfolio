@@ -1,4 +1,4 @@
-# My Portfolio
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/f1cfd46f-cfd0-46c0-9794-3321e918afa8" /># My Portfolio
 
 **Live Demo:** [https://my-portfolio-5lx5.onrender.com](https://my-portfolio-5lx5.onrender.com)
 
@@ -14,6 +14,22 @@ A fully responsive and dynamic personal portfolio website built using **Flask**,
 - 📦 **Supabase** integration for database storage and CRUD operations
 - 🔐 Login system for secure admin access
 - 📱 Fully responsive with smooth navigation and modern design
+
+---
+
+## Flowchart
+
+Here’s the user flow of the application:
+
+![Flowchart](docs/flowchart.svg)
+
+---
+
+## High-level System Design
+
+This diagram shows the overall architecture of the Portfolio website, including frontend, backend, database, and email notification flows:
+
+![High-level System Design](docs/system-design.svg)
 
 ---
 
