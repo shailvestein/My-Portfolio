@@ -59,3 +59,16 @@ My-Portfolio/
 └── README.md            # Project documentation
 
 ```
+
+## Usage
+1. Visitors can see and scroll over the webpage.
+2. Admin can perform the CRUD operations on the content dynamically.
+3. After updation, visitor will see the updates once page is refreshed.
+
+
+## Contact
+For any questions or feedback, reach out to:
+  * Author: Shailesh Kumar Vishwakarma
+  * Email: shailvestein.careers@gmail.com
+  * GitHub: shailvestein
+
